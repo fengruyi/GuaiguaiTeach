@@ -3,6 +3,13 @@ package com.guaiwa.guaiguaiteach.common.http;
 
 import com.guaiwa.guaiguaiteach.config.UrlConfig;
 
+import okhttp3.ResponseBody;
+import retrofit2.http.GET;
+import retrofit2.http.Query;
+import retrofit2.http.Streaming;
+import retrofit2.http.Url;
+import rx.Observable;
+
 /**
  * Created by 80151689 on 2016-11-25.
  * 调用服务器api库
@@ -16,4 +23,12 @@ public interface DomainApiService {
 
     @Query请求参数。无论是GET或POST的参数都可以用它来实现
      */
+
+    //1->首页服务，2-服务列表
+    @GET(UrlConfig.GET_BASESERVICE_LIST)
+    Observable<String> getBaseServiceList(@Query("position") int position);
+
+    @Streaming//不加上这个注释是将整个ResponseBody放在内存中，遇到文件过大直接oom
+    @GET
+    Observable<ResponseBody> downloadFile(@Url String fileUrl);
 }

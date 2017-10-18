@@ -1,4 +1,14 @@
 <resources>
     <string name="app_name">GuaiguaiTeach</string>
     <string name="action_settings">Settings</string>
+    <string-array name="array_main_tab_item">
+        <item>TAB1</item>
+        <item>TAB2</item>
+        <item>TAB3</item>
+        <item>TAB4</item>
+    </string-array>
+    <string name="camera_image">相机相册</string>
+    <string name="sdcard_image">手机存储</string>
+    <string name="all_image">相册</string>
+    <string name="all_video">所有视频</string>
 </resources>

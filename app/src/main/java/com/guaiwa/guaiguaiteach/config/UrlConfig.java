@@ -2,7 +2,7 @@ package com.guaiwa.guaiguaiteach.config;
 
 public class UrlConfig {
 
-    public final static Env ENV = Env.RELEASE;
+    public final static Env ENV = Env.TEST;
 
     public static final boolean DEBUG = true;
 
@@ -16,7 +16,6 @@ public class UrlConfig {
         public String host;
 
     }
-
     static {
         switch (ENV) {
             case PRE:
@@ -39,5 +38,6 @@ public class UrlConfig {
                 break;
         }
     }
-
+    //基础服务列表
+    public static final String GET_BASESERVICE_LIST = "/common/v1/service/list.pb";
 }
