@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <com.guaiwa.guaiguaiteach.widget.MyImageView
+        android:id="@+id/image_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        fresco:actualImageScaleType="focusCrop"
+        fresco:placeholderImageScaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/tv_video_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/image_view"
+        android:layout_alignParentRight="true"
+        android:includeFontPadding="false"
+        android:gravity="center_vertical|right"
+        android:padding="7dp"
+        android:textColor="@color/C03" />
+    <View
+        android:id="@+id/view_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <ImageView
+        android:id="@+id/selected_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/image_view"
+        android:layout_alignRight="@id/image_view"
+        android:paddingTop="10dp"
+        android:paddingLeft="10dp"
+        android:paddingBottom="2dp"
+        android:paddingRight="2dp"
+        android:gravity="center"
+         />
+</RelativeLayout>

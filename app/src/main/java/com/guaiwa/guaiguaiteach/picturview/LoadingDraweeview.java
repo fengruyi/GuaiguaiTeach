@@ -14,6 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 
 
 import com.facebook.common.file.FileUtils;
@@ -50,7 +51,7 @@ public class LoadingDraweeview extends FrameLayout {
     private SubsamplingScaleImageView mScaleImageView;
     private ImageView imageView;
     private PhotoDraweeView mDraweeView;
-    private View loadingView;
+    private ProgressBar loadingView;
     private TagImageInfo mTagImageInfo;
     private Context mContext;
     private Uri mUri;
@@ -139,7 +140,7 @@ public class LoadingDraweeview extends FrameLayout {
             addView(imageView, layoutParams);
         }
         if (needShowLloadingView) {
-            loadingView = new View(mContext);
+            loadingView = new ProgressBar(mContext);
             addView(loadingView, layoutParams);
         }
 

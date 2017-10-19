@@ -18,7 +18,7 @@ import com.guaiwa.guaiguaiteach.base.dummy.DummyContent;
 public class MainActivity extends AppCompatActivity implements ItemFragment.OnListFragmentInteractionListener {
     String TAG = "MainActivity";
     private final Class mFragments[] = {
-            ItemFragment.newInstance(30).getClass(),
+            MainFragment.class,
             ItemFragment.newInstance(20).getClass(),
             ItemFragment.newInstance(5).getClass(),
             ItemFragment.newInstance(30).getClass(),
